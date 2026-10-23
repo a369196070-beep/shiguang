@@ -1,0 +1,18 @@
+# /etc/systemd/system/shiguang.service
+[Unit]
+Description=Shiguang recipe community API
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=shiguang
+Group=shiguang
+WorkingDirectory=/opt/shiguang
+EnvironmentFile=/etc/shiguang/shiguang.env
+ExecStart=/usr/bin/java -XX:MaxRAMPercentage=75 -jar /opt/shiguang/shiguang-server.jar --spring.profiles.active=prod
+Restart=on-failure
+RestartSec=5
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

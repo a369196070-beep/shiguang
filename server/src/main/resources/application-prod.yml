@@ -1,0 +1,16 @@
+server:
+  servlet:
+    session:
+      cookie:
+        secure: true
+
+spring:
+  datasource:
+    password: ${DB_PASSWORD}
+
+app:
+  allowed-origins: ${ALLOWED_ORIGINS:}
+
+logging:
+  level:
+    com.shiguang: INFO

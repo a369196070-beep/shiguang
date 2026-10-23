@@ -1,0 +1,17 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+.vite/
+.shots/
+server/target/
+server/.tools/
+server/.devmysql/
+server/uploads/
+server/uploads-dev/
+server/uploads-test/
+
+# 本地打包文件，GitHub Release 单独上传
+*.zip

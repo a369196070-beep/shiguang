@@ -1,0 +1,9 @@
+target/
+.tools/
+.devmysql/
+uploads/
+uploads-dev/
+*.log
+.idea/
+*.iml
+.vscode/
